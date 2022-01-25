@@ -1,31 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        body {
-            background-color: #42263A;
-        }
-        .title {
-            font-size: 100px;
-            color: white;
-        }
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>myblog 원본</title>
+  <style>
+    body{background-color: #42263A;}
+    .title{
+      font-size: 100px;
+      color: white;
+    }
 
-        @keyframes blink-effect { 50% { opacity: 0; } }
-        
-        .blink {animation: blink-effect 1s step-end infinite;}
-    </style>
+    @keyframes blink-effect {50%{opacity: 0;}}
+    .blink {
+      animation-name: blink-effect;
+      animation-duration: 1s;
+      animation-timing-function: step-end;
+      animation-iteration-count: infinite;
+      animation-play-state: paused;/*정지*/
+    }
+  </style>
 </head>
 <body>
-<div class="title">console.log(전은우);<span class="blink">|</span></div>
-<script>
-    document.querySelector('button').addEventListener('click',()=>{
-        window.alert('hi')
-    },false)
+  <div class="title"><span class="typing"></span><span class="blink">|</span></div>
+  <script>
+    const $typing = document.querySelector('.typing');
+    const $blink = document.querySelector('.blink');
+    const text = 'console.log(전은우);';
+    let i = 0;
 
-</script>
+    function typing() {
+      let txt = text[i++];
+
+      $typing.innerHTML += txt;
+      if(i>=text.length){
+        clearInterval(interval);
+        $blink.style.animationPlayState = "running";//실행
+      }
+    }
+
+    let interval = setInterval(typing, 100); 
+  </script>
 </body>
 </html>
