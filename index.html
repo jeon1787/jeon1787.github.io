@@ -13,146 +13,172 @@
       font-weight: normal;
       font-style: normal;
     }
-
-    body{
-      font-family: 'GowunBatang-Regular';
+    @font-face {
+      font-family: 'GmarketSansBold';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
     }
+    *{outline: solid 1px red;}
 
     /*화면*/
     *{margin: 0px; border: 0px;}
-    .chapter1{
-      background-color: #42263A;
+    
+    .upper{
+      position: fixed;
+
+      height: 80px;
+      width: calc(100vw - 17px);
+      background-color: white;
+      
+      display: flex;
+      justify-content: space-between;
+
+      z-index: 1;
+    }
+    .link{
+      width: calc(15vw - 17px);
+      display: flex;
+      justify-content: space-evenly;
+    }
+
+    header{
+      background-color: rgba(192, 191, 191, 0.1);
+      /* background-color: url("https://cdn.pixabay.com/photo/2016/03/26/13/09/cup-of-coffee-1280537_960_720.jpg"); */
+      /* background-image: url("https://cdn.pixabay.com/photo/2016/03/26/13/09/cup-of-coffee-1280537_960_720.jpg"); */
+      /* background-repeat: no-repeat; */
+      /* background-size: cover; */
+      /* opacity: 0.2; */
       height: 100vh;
       width: calc(100vw - 17px);
+
+      color: white;
+      font-family: sans-serif;
+      font-weight: 700;
+      font-size: 5em;
     }
-    .chapter2{
+    pre{
+      position: relative;
+      top: 30%;
+      left: 0%;
+
+      width: 500px;
+      height: 300px;
+
+      color: black;
+      /* font-family: Arial, Helvetica, sans-serif; */
+      font-family: sans-serif;
+      font-size: 1em;
+    }
+
+    main{
       background-color: white;
       height: 100vh;
       width: calc(100vw - 17px);
-    }
-    .chapter3{
-      background-color: skyblue;
-      height: calc(100vh - 100px);
-      width: calc(100vw - 17px);
-    }
-    #footer{
-      height: 100px;
-      width: calc(100vw - 17px);
-      background-color: black;
-      color: white;
-    }
-
-    /*네비*/
-    .nav{
-      width: auto;
-      height: 100px;
-      background-color: aquamarine;
-
-      position: sticky;
-      top: 200px;
-      float: left;
 
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
     }
-
-    /*타이핑*/
+    section{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+    .inner{
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+    }
     .title{
-      font-size: 100px;
-      color: white;
+      font-family: GmarketSansBold;
+      text-align: center;
+      font-size: 2em;
+      text-transform: uppercase;
+    }
+    .intro{
+      display: flex;
+      justify-content: center;
+    }
+    .intro>div:first-child{
+      width: 30%;
+      height: 200px;
+    }
+    #typing{
+      width: 70%;
+      height: 200px;
     }
 
-    @keyframes blink-effect {50%{opacity: 0;}}
-    .blink {
-      animation-name: blink-effect;
-      animation-duration: 1s;
-      animation-timing-function: step-end;
-      animation-iteration-count: infinite;
-      animation-play-state: paused;/*정지*/
+    .footer{
+      height: 80px;
+      width: calc(100vw - 17px);
     }
   </style>
 </head>
 <body>
 
-  <!--네비-->
-  <div class="nav">
-    <a href="#chapter1">챕터1</a>
-    <a href="#chapter2">챕터2</a>
-    <a href="#chapter3">챕터3</a>
+  <div class="upper">
+    <span>JEON EUN WOO</span>
+    <span class="link">
+      <a href="#chapter1">챕터1</a>
+      <a href="#chapter2">챕터2</a>
+    </span>
   </div>
-  
-  <!--화면-->
-  <div content="width=device-width, initial-scale=1">
-    <!--화면1-->
-    <div id="chapter1" class="chapter chapter1" onmousewheel="wheelFunction(event)" content="width=device-width, initial-scale=1">
-      
-      화면1
-      <div class="title"><span class="typing"></span><span class="blink">|</span></div>
-    </div>
-    
-    <!--화면2-->
-    <div id="chapter2" class="chapter chapter2" onmousewheel="wheelFunction(event)" content="width=device-width, initial-scale=1">
-      화면2
-    </div>
-    
-    <!--화면3-->
-    <div id="chapter3" class="chapter chapter3" onmousewheel="wheelFunction(event)" content="width=device-width, initial-scale=1">
-      화면3
-    </div>
 
-    <div id="footer">
-      푸터
-    </div>
-  </div>
+  <header id="chapter1" class="chapter chapter1">
+    <!-- <pre>
+      MY
+      PORTFOLIO
+    </pre> -->
+  </header>
+
+  <main id="chapter2" class="chapter chapter2">
+    <section>
+      <div class="inner">
+        <div class="title">About me</div>
+        <div class="intro">
+          <div>사진 등 프로필</div>
+          <div id="typing"></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="title">Skills</div>
+    </section>
+
+    <section>
+      <div class="title">Project</div>
+    </section>
+
+    <section>
+      <div class="title">Education</div>
+    </section>
+
+    <section>
+      <div class="title">Contact</div>
+    </section>
+  </main>
   
+  <footer class="footer"></footer>
+
+  <!--typeit.js-->
+  <script src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script>
+  <script src="typing.js"></script>
 
   <script>
-    const $typing = document.querySelector('.typing');
-    const $blink = document.querySelector('.blink');
-    const text = 'console.log(전은우);';
-    let i = 0;
+    const $upper = document.querySelector(".upper");
 
-    function typing() {
-      let txt = text[i++];
-
-      $typing.innerHTML += txt;
-      if(i>=text.length){
-        clearInterval(interval);
-        $blink.style.animationPlayState = "running";//실행
+    document.addEventListener("wheel", e => {
+      console.log($upper.style.top);
+      console.log("top : " + document.documentElement.scrollTop);
+      console.log("Y : " + window.scrollY);
+      console.log(e);
+      $upper.style.boxShadow = "0 40px 100px rgb(0 0 0 / 20%)";
+      
+      if(window.scrollY == 0){
+        $upper.style.boxShadow = "";
       }
-    }
-
-    let interval = setInterval(typing, 100); 
-
-    //마우스 휠 이벤트
-    function wheelFunction(event){
-      event.preventDefault();
-
-      // console.log(event.deltaY);
-      // console.log(event.wheelDeltaY);//휠 이동
-      // console.log("x : " + event.x);//마우스 x축 위치
-      // console.log("y : " + event.y);//마우스 y축 위치
-      // console.log("이전 형제요소 : " + event.target.previousElementSibling);
-      // console.log("이후 형제요소 : " + event.target.nextElementSibling);
-      // console.log("이전 형제요소id : " + event.target.previousElementSibling.id);
-      // console.log("이후 형제요소id : " + event.target.nextElementSibling.id);
-      // console.log(document.querySelector(".chapter1"));
-
-      const chap1 = document.querySelector(".chapter1");
-      const chap2 = document.querySelector(".chapter2");
-      const chap3 = document.querySelector(".chapter3");
-
-      if(event.wheelDeltaY<0){
-        console.log("아래로");
-        if(event.target.nextElementSibling == null) return;
-        setTimeout(event.target.nextElementSibling.scrollIntoView({behavior: 'smooth'}), 1000);
-      }else{
-        console.log("위로");
-        if(event.target.previousElementSibling == null) return;
-        setTimeout(event.target.previousElementSibling.scrollIntoView({behavior: 'smooth'}), 1000);
-      }
-    }
+    });
   </script>
 </body>
 </html>

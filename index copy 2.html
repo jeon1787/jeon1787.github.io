@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio_Jeoneunwoo</title>
+  <style>
+    /*폰트*/
+    @font-face {
+      font-family: 'GowunBatang-Regular';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunBatang-Regular.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    body{
+      font-family: 'GowunBatang-Regular';
+    }
+
+    img{
+      width: 70px;
+      height: 70px;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .console{
+      width: 800px;
+      font-family: sans-serif;
+      font-size: 3em;
+    }
+
+    .hello{
+      display: flex;
+      justify-content: center;
+    }
+
+    /*화면*/
+    *{margin: 0px; border: 0px;}
+    .chapter1{
+      background-color: skyblue;
+      height: 100vh;
+      width: calc(100vw - 17px);
+
+      color: white;
+      font-family: sans-serif;
+      font-weight: 700;
+      /* font-size: 5em; */
+
+      display: flex;
+      justify-content: center;
+    }
+
+    .chapter2{
+      background-color: white;
+      height: 100vh;
+      /* width: calc(100vw - 17px); */
+
+      display: flex;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+  <img class="mouseImg" src="New Piskel.gif" alt="">
+
+  <div class="chapter1">
+    <div>
+
+      <div class="hello">
+      <pre style="font-family:Arial">
+       __
+      /\   \
+      \ \   \___
+       \ \    _  `\
+        \ \   \ \   \
+         \ \ _\ \ _\
+          \/_ /\/_ /
+      </pre>
+      <pre style="font-family:Arial">
+
+
+          __
+       /' __ `\
+      /\    __/
+      \ \____\
+       \/____/
+      </pre>
+      <pre style="font-family:Arial">
+       ___
+      /\_   \
+      \/ / \  \
+         \  \  \
+          \_\  \_
+         /\ ____\
+         \/____ /
+      </pre>
+      <pre style="font-family:Arial">
+       ___
+      /\_   \
+      \/ / \  \
+         \  \  \
+          \_\  \_
+         /\ ____\
+         \/____ /
+      </pre>
+      <pre style="font-family:Arial">
+
+
+         ___
+       /  __  `\
+      /\   \L\   \
+      \ \____ /
+       \/ ___ /
+      </pre>
+      <pre style="font-family:Arial">
+
+
+       __   __   __
+      /\   \ /\   \ /\   \
+      \ \   \_/   \_/   \
+       \ \ ___x___/'
+        \ /__ / /__ /
+      </pre>
+      <pre style="font-family:Arial">
+
+
+         ___
+       /  __  `\
+      /\   \L\   \
+      \ \____ /
+       \/ ___ /
+      </pre>
+      <pre style="font-family:Arial">
+
+
+       _  __
+      /\ `'__\
+      \ \  \_ /
+       \ \_\
+        \/_/
+      </pre>
+      <pre style="font-family:Arial">
+        ___
+       /\_   \
+       \/ / \  \
+          \  \  \
+           \_\  \_
+          /\ ____\
+          \/____ /
+      </pre>
+      <pre style="font-family:Arial">
+         __
+        / \  \
+        \_\  \
+       / '_`  \
+      /\  \L\  \
+      \ \____\
+       \/ ___ /
+      </pre>
+      <pre style="font-family:Arial">
+       __
+      / \  \
+      \  \  \
+       \  \  \
+        \  \_\
+         \/ \_\
+          \ /_/
+      </pre>
+      </div>
+
+    </div>
+
+    <!-- MY PORTFOLIO -->
+  </div>
+  
+  <div class="chapter2">
+    <div class="console">
+      <div id="title"></div>
+  
+    </div>
+  </div>
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script>
+  <script>
+    //마우스 커서 이미지
+    const $mouseImg = document.querySelector(".mouseImg");
+
+    document.addEventListener("mousemove", e => {
+        const mouseX = e.pageX;
+        const mouseY = e.pageY;
+        $mouseImg.style.left = mouseX + 'px';
+        $mouseImg.style.top = mouseY + 'px';
+    });
+    document.addEventListener("wheel", e => {
+        // console.log(e);
+        const mouseX = e.pageX;
+        const mouseY = e.pageY;
+        $mouseImg.style.left = mouseX + 'px';
+        $mouseImg.style.top = mouseY + 'px';
+    });
+
+
+    new TypeIt("#title", {
+      speed: 50,
+      startDelay: 900,
+    })
+      .type("let Jeon_Eunwoo = ", {speed : 50})
+      .type("{}", {speed : 0})
+      .move(-1, {instant: true})
+      .pause(200)
+      .type("<br>", {speed: 0})
+      .move(-1, {instant: true})
+
+      .type("<br>", {speed: 0})
+      .type("&nbsp&nbsp&nbsp&nbsp", {speed: 0})
+      .pause(200)
+      .type("name: \"전은우\",", {speed : 50})
+
+      .type("<br>&nbsp&nbsp&nbsp&nbsp", {speed: 0})
+      .pause(200)
+      .type("age: 30,", {speed : 50})
+
+      .type("<br>&nbsp&nbsp&nbsp&nbsp", {speed: 0})
+      .pause(200)
+      .type("gender: \"male\",", {speed : 50})
+
+      .type("<br>&nbsp&nbsp&nbsp&nbsp", {speed: 0})
+      .pause(200)
+      .type("skill: ", {speed : 50})
+      .type("[]", {speed : 0})
+      .move(-1, {instant: true})
+      .pause(200)
+      .type("\"HTML\", \"CSS\", \"javascript\", \"JAVA\", \"Spring Framework\", \"Oracle SQL Developer\", \"...\"")
+
+
+      // .move(1, {instant: true})
+      // .delete(1)
+      // .type("<br>&nbsp&nbsp&nbsp&nbsp<br>&nbsp&nbsp&nbsp&nbsp", {speed: 0})
+
+      // .type("<br>&nbsp&nbsp&nbsp&nbsp<br>&nbsp&nbsp&nbsp&nbsp", {speed: 0})
+      // .move(-5, {instant: true})
+
+      // .type("<br>", {speed: 0})
+
+      // .type("<br>", {speed: 0})
+      // .type("&nbsp&nbsp&nbsp&nbsp", {speed: 0})
+      // .pause(200)
+
+      // .type("<br>&nbsp&nbsp&nbsp&nbsp", {speed: 0})
+      // .type("<br>", {delay: 300})
+      // .move(-1, {delay: 200})
+      .go();
+
+      let jeon = {}
+
+      let Jeon_Eunwoo = {
+        name : "전은우",
+        age : 30,
+        gender : "male",
+        status : "구직중!",
+        like : "",
+        dislike : "",
+        hobby : "",
+        // skills: [
+
+        // ]
+        skill : ["HTML", "CSS", "javascript", "VSCode", "JAVA11", "Spring Framework", "Thymeleaf", "RestAPI", "AJAX", "Bootstrap5", "Oracle 18c XE", "MVC", "IntelliJ IDEA", "Git", "GitHub", "Github Desktop"],
+        hello: function(){ return `이름은 ${this.name}이고, 나이는 ${this.age}입니다.`; }
+      }
+      console.log(Jeon_Eunwoo);
+  </script>
+</body>
+</html>
