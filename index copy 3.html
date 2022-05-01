@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio_Jeoneunwoo</title>
+  <style>
+    /*폰트*/
+    @font-face {
+      font-family: 'GowunBatang-Regular';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunBatang-Regular.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'GmarketSansBold';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+    *{outline: solid 1px red;}
+
+    /*화면*/
+    *{margin: 0px; border: 0px;}
+    
+    .upper{
+      position: fixed;
+
+      height: 80px;
+      width: calc(100vw - 17px);
+      background-color: white;
+      
+      display: flex;
+      justify-content: space-between;
+
+      z-index: 1;
+    }
+    .link{
+      width: calc(15vw - 17px);
+      display: flex;
+      justify-content: space-evenly;
+    }
+
+    header{
+      background-color: rgba(192, 191, 191, 0.1);
+      /* background-color: url("https://cdn.pixabay.com/photo/2016/03/26/13/09/cup-of-coffee-1280537_960_720.jpg"); */
+      /* background-image: url("https://cdn.pixabay.com/photo/2016/03/26/13/09/cup-of-coffee-1280537_960_720.jpg"); */
+      /* background-repeat: no-repeat; */
+      /* background-size: cover; */
+      /* opacity: 0.2; */
+      height: 100vh;
+      width: calc(100vw - 17px);
+
+      font-family: sans-serif;
+      font-weight: 700;
+      font-size: 5em;
+    }
+    .svg{
+      height: 100vh;
+      width: calc(100vw - 17px);
+    }
+    pre{
+      position: relative;
+      top: 50%;
+      left: 0%;
+
+      width: 500px;
+      height: 300px;
+
+      z-index: -1;
+      color: gray;
+      /* font-family: Arial, Helvetica, sans-serif; */
+      font-family: sans-serif;
+      font-size: 1em;
+    }
+
+    main{
+      background-color: white;
+      height: 100vh;
+      width: calc(100vw - 17px);
+
+      display: flex;
+      flex-direction: column;
+    }
+    section{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+    .inner{
+      width: 60%;
+      display: flex;
+      flex-direction: column;
+    }
+    .title{
+      font-family: GmarketSansBold;
+      text-align: center;
+      font-size: 2em;
+      text-transform: uppercase;
+    }
+    .intro{
+      display: flex;
+      justify-content: center;
+    }
+    .intro>div:first-child{
+      width: 30%;
+      height: 200px;
+    }
+    #typing{
+      width: 70%;
+      height: 200px;
+    }
+
+    .footer{
+      height: 80px;
+      width: calc(100vw - 17px);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="upper">
+    <span>JEON EUN WOO</span>
+    <span class="link">
+      <a href="#chapter1">챕터1</a>
+      <a href="#chapter2">챕터2</a>
+    </span>
+  </div>
+
+  <header id="chapter1" class="chapter chapter1">
+    <svg class="svg">
+      <!-- <pre>
+        MY
+        PORTFOLIO
+      </pre> -->
+      <text x="20" y="100">안녕하세요. 신입개발자 전은우입니다.</text>
+    </svg>
+  </header>
+
+  <main id="chapter2" class="chapter chapter2">
+    <section>
+      <div class="inner">
+        <div class="title">About me</div>
+        <div class="intro">
+          <div>사진 등 프로필</div>
+          <div id="typing"></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="inner">
+        <div class="title">Skills</div>
+        <div class="skill">
+          <div>
+            <!-- <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="html5" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg=""><path fill="currentColor" d="M0 32l34.9 395.8L191.5 480l157.6-52.2L384 32H0zm308.2 127.9H124.4l4.1 49.4h175.6l-13.6 148.4-97.9 27v.3h-1.1l-98.7-27.3-6-75.8h47.7L138 320l53.5 14.5 53.7-14.5 6-62.2H84.3L71.5 112.2h241.1l-4.4 47.7z"></path></svg> -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="title">Project</div>
+    </section>
+
+    <section>
+      <div class="title">Education</div>
+    </section>
+
+    <section>
+      <div class="title">Contact</div>
+    </section>
+  </main>
+  
+  <footer class="footer"></footer>
+
+  <!--typeit.js-->
+  <script src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script>
+  <script src="typing.js"></script>
+
+  <script>
+    const $upper = document.querySelector(".upper");
+
+    document.addEventListener("wheel", e => {
+      console.log($upper.style.top);
+      console.log("top : " + document.documentElement.scrollTop);
+      console.log("Y : " + window.scrollY);
+      console.log(e);
+      $upper.style.boxShadow = "0 40px 100px rgb(0 0 0 / 20%)";
+      
+      if(window.scrollY == 0){
+        $upper.style.boxShadow = "";
+      }
+    });
+  </script>
+</body>
+</html>

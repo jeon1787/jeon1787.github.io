@@ -4,181 +4,83 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio_Jeoneunwoo</title>
+  <title>Document</title>
   <style>
-    /*폰트*/
-    @font-face {
-      font-family: 'GowunBatang-Regular';
-      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunBatang-Regular.woff') format('woff');
-      font-weight: normal;
-      font-style: normal;
+    @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: sans-serif;
     }
-    @font-face {
-      font-family: 'GmarketSansBold';
-      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
-      font-weight: normal;
-      font-style: normal;
-    }
-    *{outline: solid 1px red;}
-
-    /*화면*/
-    *{margin: 0px; border: 0px;}
-    
-    .upper{
-      position: fixed;
-
-      height: 80px;
-      width: calc(100vw - 17px);
-      background-color: white;
-      
-      display: flex;
-      justify-content: space-between;
-
-      z-index: 1;
-    }
-    .link{
-      width: calc(15vw - 17px);
-      display: flex;
-      justify-content: space-evenly;
+    body{
+      height: 2000px;
     }
 
     header{
-      background-color: rgba(192, 191, 191, 0.1);
-      /* background-color: url("https://cdn.pixabay.com/photo/2016/03/26/13/09/cup-of-coffee-1280537_960_720.jpg"); */
-      /* background-image: url("https://cdn.pixabay.com/photo/2016/03/26/13/09/cup-of-coffee-1280537_960_720.jpg"); */
-      /* background-repeat: no-repeat; */
-      /* background-size: cover; */
-      /* opacity: 0.2; */
-      height: 100vh;
-      width: calc(100vw - 17px);
-
-      color: white;
-      font-family: sans-serif;
-      font-weight: 700;
-      font-size: 5em;
-    }
-    pre{
-      position: relative;
-      top: 30%;
-      left: 0%;
-
-      width: 500px;
-      height: 300px;
-
-      color: black;
-      /* font-family: Arial, Helvetica, sans-serif; */
-      font-family: sans-serif;
-      font-size: 1em;
-    }
-
-    main{
-      background-color: white;
-      height: 100vh;
-      width: calc(100vw - 17px);
-
-      display: flex;
-      flex-direction: column;
-    }
-    section{
-      width: 100%;
+      /* background-color: #000; */
+      background-image: url("https://cdn.pixabay.com/photo/2016/11/22/23/49/bright-1851267_960_720.jpg");
+      background-size: cover;
       display: flex;
       justify-content: center;
+      align-items: center;
+      min-height: 100vh;
     }
-    .inner{
-      width: 80%;
+    ul{
+      position: relative;
       display: flex;
       flex-direction: column;
     }
-    .title{
-      font-family: GmarketSansBold;
-      text-align: center;
-      font-size: 2em;
+    ul li{
+      list-style: none;
+    }
+    ul li a{
+      position: relative;
+      display: inline-block;
+      margin: 10px 0;
+      font-size: 4em;
+      text-decoration: none;
+      color: #fff;
       text-transform: uppercase;
     }
-    .intro{
-      display: flex;
-      justify-content: center;
+    .cursor{
+      position: fixed;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: #fff;
+      transition: 0.1s;
+      transform: translate(-50%,-50%);
+      pointer-events: none;
+      mix-blend-mode: difference;
     }
-    .intro>div:first-child{
-      width: 30%;
-      height: 200px;
-    }
-    #typing{
-      width: 70%;
-      height: 200px;
-    }
-
-    .footer{
-      height: 80px;
-      width: calc(100vw - 17px);
+    ul li:hover ~ .cursor{
+      transform: scale(6);
     }
   </style>
 </head>
 <body>
-
-  <div class="upper">
-    <span>JEON EUN WOO</span>
-    <span class="link">
-      <a href="#chapter1">챕터1</a>
-      <a href="#chapter2">챕터2</a>
-    </span>
-  </div>
-
-  <header id="chapter1" class="chapter chapter1">
-    <!-- <pre>
-      MY
-      PORTFOLIO
-    </pre> -->
+  <header>
+    <ul>
+      <li><a href="#">my</a></li>
+      <li><a href="#">portfolio</a></li>
+      <li><a href="#">안녕하세요.</a></li>
+      <li><a href="#">신입개발자</a></li>
+      <li><a href="#">전은우입니다.</a></li>
+      <div class="cursor"></div>
+    </ul>
   </header>
-
-  <main id="chapter2" class="chapter chapter2">
+  <main>
     <section>
-      <div class="inner">
-        <div class="title">About me</div>
-        <div class="intro">
-          <div>사진 등 프로필</div>
-          <div id="typing"></div>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="title">Skills</div>
-    </section>
-
-    <section>
-      <div class="title">Project</div>
-    </section>
-
-    <section>
-      <div class="title">Education</div>
-    </section>
-
-    <section>
-      <div class="title">Contact</div>
     </section>
   </main>
-  
-  <footer class="footer"></footer>
-
-  <!--typeit.js-->
-  <script src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script>
-  <script src="typing.js"></script>
 
   <script>
-    const $upper = document.querySelector(".upper");
-
-    document.addEventListener("wheel", e => {
-      console.log($upper.style.top);
-      console.log("top : " + document.documentElement.scrollTop);
-      console.log("Y : " + window.scrollY);
-      console.log(e);
-      $upper.style.boxShadow = "0 40px 100px rgb(0 0 0 / 20%)";
-      
-      if(window.scrollY == 0){
-        $upper.style.boxShadow = "";
-      }
-    });
+    const cursor = document.querySelector('.cursor');
+    document.addEventListener('mousemove', e=>{
+      cursor.style.left = e.pageX + 'px';
+      cursor.style.top = e.pageY + 'px';
+    })
   </script>
 </body>
 </html>
