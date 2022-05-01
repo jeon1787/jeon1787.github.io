@@ -5,62 +5,23 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
-    *{
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: sans-serif;
-    }
-    body{
-      height: 2000px;
-    }
-
-    header{
-      /* background-color: #000; */
-      background-image: url("https://cdn.pixabay.com/photo/2016/11/22/23/49/bright-1851267_960_720.jpg");
-      background-size: cover;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-    }
-    ul{
-      position: relative;
-      display: flex;
-      flex-direction: column;
-    }
-    ul li{
-      list-style: none;
-    }
-    ul li a{
-      position: relative;
-      display: inline-block;
-      margin: 10px 0;
-      font-size: 4em;
-      text-decoration: none;
-      color: #fff;
-      text-transform: uppercase;
-    }
-    .cursor{
-      position: fixed;
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      background-color: #fff;
-      transition: 0.1s;
-      transform: translate(-50%,-50%);
-      pointer-events: none;
-      mix-blend-mode: difference;
-    }
-    ul li:hover ~ .cursor{
-      transform: scale(6);
-    }
-  </style>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="cursor.css">
 </head>
 <body>
-  <header>
+  <!-- 어퍼 -->
+  <div class="upper">
+    <span>jeon eun woo</span>
+    <span class="link">
+      <a href="#header">intro</a>
+      <a href="#section1">about me</a>
+      <a href="#section2">skills</a>
+      <a href="#section3">projects</a>
+    </span>
+  </div>
+
+  <!-- 헤더 -->
+  <header id="header">
     <ul>
       <li><a href="#">my</a></li>
       <li><a href="#">portfolio</a></li>
@@ -70,12 +31,58 @@
       <div class="cursor"></div>
     </ul>
   </header>
-  <main>
-    <section>
+
+  <!-- 메인 -->
+  <main id="main">
+    <section id="section1">
+      <div>
+        <div class="subject">about me</div>
+        <div class="content content1">
+          <div>프로필</div>
+          <div>프로필</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="section2">
+      <div>
+        <div class="subject">skills</div>
+        <div class="content content2">
+          <div>
+            <svg style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="512px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="_x31_81-java"><g><path d="M333.283,307.117c8.807-6.02,21.023-11.23,21.023-11.23s-34.768,6.29-69.357,9.165    c-42.315,3.503-87.775,4.221-110.595,1.167c-53.996-7.187,29.647-27.044,29.647-27.044s-32.433-2.154-72.413,17.07    C84.422,319.066,248.383,329.487,333.283,307.117z" style="fill:#5382A1;"/><path d="M256.56,278.277c-17.07-38.362-74.659-72.054,0-130.99C349.727,73.797,301.93,26,301.93,26    c19.316,75.917-67.92,98.917-99.456,146.084C181.001,204.337,212.986,238.927,256.56,278.277z" style="fill:#F8981D;"/><path d="M359.518,119.975c0.09,0-157.403,39.351-82.205,125.958c22.191,25.516-5.84,48.516-5.84,48.516    s56.332-29.108,30.457-65.495C277.762,194.993,259.254,178.103,359.518,119.975z" style="fill:#F8981D;"/><path d="M354.039,362.999c-0.449,1.078-1.797,2.247-1.797,2.336    c115.266-30.277,72.861-106.824,17.787-87.416c-4.852,1.707-7.365,5.66-7.365,5.66s3.053-1.259,9.883-2.696    C400.396,275.044,440.377,318.168,354.039,362.999L354.039,362.999z" style="fill:#5382A1;"/><path d="M396.443,418.971c0,0,13.027,10.692-14.285,19.047c-52.018,15.722-216.339,20.483-261.979,0.63    c-16.441-7.099,14.374-17.072,24.078-19.137c10.061-2.157,15.901-1.799,15.901-1.799c-18.238-12.847-117.963,25.247-50.671,36.119    C292.945,483.657,444.061,440.443,396.443,418.971L396.443,418.971z" style="fill:#5382A1;"/><path d="M195.557,381.776c-70.706,19.766,43.035,60.555,133.055,22.011    c-14.732-5.748-25.334-12.397-25.334-12.397c-40.16,7.637-58.756,8.175-95.233,4.043    C177.948,392.019,195.557,381.776,195.557,381.776L195.557,381.776z" style="fill:#5382A1;"/><path d="M357.092,469.103c-70.705,13.296-157.941,11.771-209.602,3.233c0-0.088,10.602,8.716,65.046,12.22    c82.834,5.302,210.051-2.966,213.016-42.136C425.553,442.42,419.803,457.245,357.092,469.103L357.092,469.103z" style="fill:#5382A1;"/><path d="M317.922,343.144c-53.188,10.243-84.003,9.973-122.904,5.93    c-30.098-3.145-10.422-17.698-10.422-17.698c-77.982,25.874,43.304,55.164,152.281,23.269    C325.289,350.601,317.922,343.144,317.922,343.144z" style="fill:#5382A1;"/></g></g><g id="Layer_1"/></svg>
+            <p>java</p>
+          </div>
+          <div>
+            <svg enable-background="new 0 0 32 32" height="32px" id="Layer_1" version="1.0" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><polygon fill="#E44D26" points="27.377,28.889 16.001,32 4.625,28.889 2,0 30.002,0  "/><polygon fill="#FF6C39" points="16,2 16,29.75 25.232,27.008 27.688,2  "/><polygon fill="#FFFFFF" points="24.363,6 7.607,6 8,10 8.619,17 19.503,17 19.148,20.984 16,21.99 12.857,20.984 12.648,19    8.803,19 9.262,23.987 16,25.99 22.728,23.986 23.718,13 12.252,13 12.002,10 24,10  "/></g><g/><g/><g/><g/><g/><g/></svg>
+            <p>html</p>
+          </div>
+          <div>
+            <svg enable-background="new 0 0 32 32" height="32px" id="Layer_1" version="1.0" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><polygon fill="#1F62AE" points="27.377,28.889 16.001,32 4.625,28.889 2,0 30.002,0  "/><polygon fill="#347DC6" points="16,2 16,29.75 25.232,27.008 27.688,2  "/><polygon fill="#FFFFFF" points="24.363,6 7.607,6 8,10 16,10 8.25,12.99 8.619,17 19.502,17 19.158,21 16,21.99 12.861,20.984    12.533,19 8.803,19 9.262,23.987 16,25.99 22.728,23.986 23.719,12.99 16.026,12.99 24,10  "/></g><g/><g/><g/><g/><g/><g/></svg>
+            <p>css</p>
+          </div>
+          <div>
+            <svg height="512px" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="512px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="_x31_87-js"><g><rect height="459.998" style="fill:#F0DB4F;" width="459.996" x="26.002" y="26.001"/><path d="M276.331,384.759c0,44.767-26.286,65.2-64.586,65.2c-34.601,0-54.623-17.865-64.892-39.529    l35.218-21.255c6.777,12.013,12.938,22.177,27.826,22.177c14.169,0,23.207-5.544,23.207-27.208V237.21h43.227V384.759    L276.331,384.759z" style="fill:#323330;"/><path d="M378.598,449.959c-40.147,0-66.124-19.099-78.754-44.151l35.219-20.332    c9.241,15.095,21.356,26.286,42.611,26.286c17.866,0,29.364-8.932,29.364-21.355c0-14.787-11.704-20.021-31.52-28.75l-10.781-4.62    c-31.214-13.246-51.853-29.983-51.853-65.2c0-32.447,24.745-57.09,63.248-57.09c27.518,0,47.232,9.549,61.402,34.603    l-33.679,21.562c-7.392-13.246-15.401-18.481-27.825-18.481c-12.63,0-20.639,8.01-20.639,18.481    c0,12.938,8.009,18.176,26.594,26.285l10.78,4.621c36.759,15.71,57.397,31.832,57.397,67.974    C450.164,428.602,419.565,449.959,378.598,449.959L378.598,449.959z" style="fill:#323330;"/></g></g><g id="Layer_1"/></svg>
+            <p>javascript</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="section3">
+      <div>
+        <div class="subject">projects</div>
+        <div class="content content3"></div>
+      </div>
     </section>
   </main>
 
+  <!-- 푸터 -->
+  <footer>
+
+  </footer>
+
   <script>
+    //헤더 커서 js
     const cursor = document.querySelector('.cursor');
     document.addEventListener('mousemove', e=>{
       cursor.style.left = e.clientX + 'px';

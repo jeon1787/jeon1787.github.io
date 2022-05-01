@@ -1,0 +1,123 @@
+@charset "utf-8";
+/* 폰트 */
+@font-face {
+  font-family: 'GowunBatang-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunBatang-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GmarketSansBold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family: 'GowunBatang-Regular'; */
+  font-family: 'GmarketSansBold';
+}
+
+/* 어퍼 */
+.upper{
+  padding: 0 50px;
+  text-transform: uppercase;
+  position: fixed;
+  height: 80px;
+  width: calc(100vw - 17px);
+  background-color: white;
+  
+  display: flex;
+  justify-content: space-between;
+
+  z-index: 1;
+  box-shadow: 0 40px 100px rgb(0 0 0 / 20%);
+}
+.upper{
+  animation: comedown 3s;
+}
+@keyframes comedown{
+  from{
+    top: -80px;
+  }
+  to{
+    top: 0px;
+  }
+}
+.upper>span:first-child{
+  margin: auto 0;
+}
+.link{
+  margin: auto 0;
+}
+.link>a{
+  margin: 0 10px;
+  text-decoration: none;
+  color: blue;
+}
+
+/* 앵커 이동 천천히 */
+html{
+  scroll-behavior:smooth;
+}
+
+/* 메인 */
+section{
+  display: flex;
+  justify-content: center;
+  padding: 15vh 0;
+}
+section>div{
+  display: flex;
+  flex-direction: column;
+}
+.subject{
+  text-align: center;
+  font-size: 3em;
+  text-transform: uppercase;
+}
+.content{
+  height: 20vh;
+  width: 60vw;
+  /* width: 100%; */
+  outline: solid 1px red;
+}
+
+/* 콘텐츠1 */
+.content1{
+  display: flex;
+  justify-content: center;
+}
+.content1>div:first-child{
+  outline: solid 1px red;
+  width: 20vw;
+}
+.content1>div:last-child{
+  outline: solid 1px red;
+  width: 40vw;
+}
+
+/* 콘텐츠2 */
+.content2{
+  display: flex;
+  flex-wrap: wrap;
+}
+svg{
+  height: 80px;
+  width: 80px;
+}
+.content2>div>div{
+  text-align: center;
+}
+
+/* 콘텐츠3 */
+
+/* 푸터 */
+footer{
+  height: 10vh;
+  width: calc(100vw - 17px);
+  background-color: #333;
+}
