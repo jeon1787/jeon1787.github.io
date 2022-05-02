@@ -27,7 +27,7 @@
   text-transform: uppercase;
   position: fixed;
   height: 80px;
-  width: calc(100vw - 17px);
+  width: 100%;
   background-color: white;
   
   display: flex;
@@ -118,6 +118,6 @@ svg{
 /* 푸터 */
 footer{
   height: 10vh;
-  width: calc(100vw - 17px);
+  width: 100%;
   background-color: #333;
 }
