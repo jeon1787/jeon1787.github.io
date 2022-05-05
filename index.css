@@ -12,13 +12,25 @@
   font-weight: normal;
   font-style: normal;
 }
-
+.subject{
+  font-family: 'GmarketSansBold';
+}
+.upper{
+  font-family: 'GmarketSansBold';
+}
+header{
+  font-family: 'GmarketSansBold';
+}
+section{
+  font-family: 'GowunBatang-Regular';
+}
+footer{
+  font-family: 'GowunBatang-Regular';
+}
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* font-family: 'GowunBatang-Regular'; */
-  font-family: 'GmarketSansBold';
 }
 
 /* 어퍼 */
@@ -34,7 +46,7 @@
   justify-content: space-between;
 
   z-index: 1;
-  box-shadow: 0 40px 100px rgb(0 0 0 / 20%);
+  box-shadow: 0 10px 30px rgb(0 0 0 / 20%);
 }
 .upper{
   animation: comedown 3s;
@@ -68,7 +80,6 @@ html{
 section{
   display: flex;
   justify-content: center;
-  padding: 15vh 0;
 }
 section>div{
   display: flex;
@@ -78,46 +89,188 @@ section>div{
   text-align: center;
   font-size: 3em;
   text-transform: uppercase;
+  margin-top: 150px;
+  margin-bottom: 50px;
 }
 .content{
-  height: 20vh;
-  width: 60vw;
-  /* width: 100%; */
-  outline: solid 1px red;
+  height: auto;
+  /* width: 60vw; */
+  /* outline: solid 1px red; */
+  margin-bottom: 150px;
 }
 
 /* 콘텐츠1 */
 .content1{
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
-.content1>div:first-child{
-  outline: solid 1px red;
-  width: 20vw;
+.profile_img{
+  margin: 0 30px;
+  height: 250px;
+  min-width: 250px;
+  border-radius: 100%;
+  overflow: hidden;
+  border: solid 1px rgb(211, 211, 211);
 }
-.content1>div:last-child{
-  outline: solid 1px red;
-  width: 40vw;
+.profile_img>img{
+  height: 350px;
+  width: 250px;
+  object-fit: cover;
+}
+.profile_div{
+  margin: 0 30px;
+  width: 550px;
+  text-align: center;
+  white-space: pre-line;
+  line-height: 1.8em;
+  font-size: 1.15em;
 }
 
 /* 콘텐츠2 */
 .content2{
+  width: 720px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
-svg{
-  height: 80px;
-  width: 80px;
+.icon>svg{
+  height: 50px;
+  width: 50px;
 }
-.content2>div>div{
+.icon>img{
+  height: 50px;
+  width: 50px;
+}
+.box{
+  height: 200px;
+  width: 200px;
+  margin: 20px;
   text-align: center;
+  box-shadow: 0px 0px 10px 1px rgb(0 0 0 / 20%);
+  padding: 15px;
+}
+.icon{
+  margin: 10px 0;
+}
+.icon + p{
+  border-bottom: solid 1px rgb(211, 211, 211);
 }
 
 /* 콘텐츠3 */
+.button_container{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.button>label{
+  background-color: beige;
+  padding: 7px;
+  margin: 0 8px;
+  font-weight: bolder;
+  cursor: pointer;
+}
+#project1, #project2{
+  display: none !important;
+}
+/* #project1:checked + label{
+
+}
+#project2:checked + label{
+
+} */
+.project{
+  display: none;
+  box-shadow: 0px 0px 10px 1px rgb(0 0 0 / 20%);
+}
+.project>div{
+  min-height: 300px;
+  width: 700px;
+  padding: 10px 15px;
+}
+.project>img{
+  height: 350px;
+  width: 700px;
+}
+.project_description{
+  margin: 10px 0;
+}
+.project_link>a{
+  text-decoration: none;
+  border: solid 1px rgb(211, 211, 211);
+}
+.up{
+  display: block;
+  text-align: center;
+}
 
 /* 푸터 */
 footer{
-  height: 10vh;
+  display: flex;
+  justify-content: center;
+  height: 200px;
   width: 100%;
-  background-color: #333;
+  background-color: gray;
+  color: white;
+}
+footer>div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+footer .footer_name{
+  font-weight: bolder;
+  font-size: 2.2em;
+  margin-bottom: 30px;
+}
+footer>div>div{
+  margin: 5px 0;
+}
+footer>div>div>a{
+  color: black;
+}
+
+@media (max-width:767px) {
+  .upper{
+    padding: 0px;
+    justify-content: center;
+  }
+  .upper>span:first-child{
+    display: none;
+  }  
+  .content2{
+    width: 480px;
+  }
+  .project>div{
+    width: 400px;
+  }
+  .project>img{
+    height: 200px;
+    width: 400px;
+  }
+}
+@media (max-width:479px) {
+  .upper{
+    padding: 0px;
+    height: 50px;
+    justify-content: center;
+  }
+  .upper>span:first-child{
+    display: none;
+  }
+  .link>a{
+    margin: 0 5px;
+    font-size: 0.8em;
+  }
+  .content2{
+    width: auto;
+  }
+  .project>div{
+    width: 400px;
+  }
+  .project>img{
+    height: 200px;
+    width: 400px;
+  }
 }
