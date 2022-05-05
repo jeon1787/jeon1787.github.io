@@ -238,16 +238,20 @@ footer>div>div>a{
   }
   .upper>span:first-child{
     display: none;
+  }
+
+  .content1 .profile_div{
+    width: 80vw;
   }  
   .content2{
     width: 480px;
   }
   .project>div{
-    width: 400px;
+    width: 80vw;
   }
   .project>img{
-    height: 200px;
-    width: 400px;
+    height: 40vw;
+    width: 80vw;
   }
 }
 @media (max-width:479px) {
@@ -263,14 +267,18 @@ footer>div>div>a{
     margin: 0 5px;
     font-size: 0.8em;
   }
+
+  .content1 .profile_div{
+    width: 80vw;
+  } 
   .content2{
     width: auto;
   }
   .project>div{
-    width: 400px;
+    width: 80vw;
   }
   .project>img{
-    height: 200px;
-    width: 400px;
+    height: 40vw;
+    width: 80vw;
   }
 }
