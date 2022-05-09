@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="index.css">
   <link rel="stylesheet" href="cursor.css">
 </head>
-<body onmousewheel="wheelFunction(event)">
+<body>
   <!-- 어퍼 -->
   <div class="upper">
     <span>jeon eun woo</span>
@@ -21,7 +21,7 @@
   </div>
 
   <!-- 헤더 -->
-  <header id="header" class="wheel_anchor wheel_anchor1">
+  <header id="header">
     <ul>
       <li><a href="#">my</a></li>
       <li><a href="#">portfolio</a></li>
@@ -34,7 +34,7 @@
 
   <!-- 메인 -->
   <main id="main">
-    <section id="section1" class="wheel_anchor wheel_anchor2">
+    <section id="section1">
       <div>
         <div class="subject">about me</div>
         <div class="content content1">
@@ -52,7 +52,7 @@
       </div>
     </section>
 
-    <section id="section2" class="wheel_anchor wheel_anchor3">
+    <section id="section2">
       <div>
         <div class="subject">skills</div>
         <div class="content content2">
@@ -129,7 +129,7 @@
       </div>
     </section>
 
-    <section id="section3" class="wheel_anchor wheel_anchor4">
+    <section id="section3">
       <div>
         <div class="subject">projects</div>
         <div class="content content3">
@@ -185,7 +185,7 @@
   </main>
 
   <!-- 푸터 -->
-  <footer id="footer" class="wheel_anchor wheel_anchor5">
+  <footer id="footer">
     <div>
       <div class="footer_name">contact</div>
       <div>
@@ -213,49 +213,49 @@
       // }
     // })
 
-    function wheelFunction(e){
-      e.preventDefault();
+    // function wheelFunction(e){
+    //   e.preventDefault();
 
-      // console.log(e.wheelDeltaY);//휠 이동
-      // console.log(e.target.closest('.wheel_anchor'));//가장 가까운 조상 태그
+    //   // console.log(e.wheelDeltaY);//휠 이동
+    //   // console.log(e.target.closest('.wheel_anchor'));//가장 가까운 조상 태그
 
-      if(e.wheelDeltaY < 0){
-        switch(e.target.closest('.wheel_anchor').className){
-          case "wheel_anchor wheel_anchor1" :
-            location.href = "#section1";
-            break;
-          case "wheel_anchor wheel_anchor2" :
-            location.href = "#section2";
-            break;
-          case "wheel_anchor wheel_anchor3" :
-            location.href = "#section3";
-            break;
-          case "wheel_anchor wheel_anchor4" :
-            location.href = "#footer";
-            break;
-          case "wheel_anchor wheel_anchor5" :
-            break;
-        }
-      }else{
-        switch(e.target.closest('.wheel_anchor').className){
-          case "wheel_anchor wheel_anchor1" :
-            break;
-          case "wheel_anchor wheel_anchor2" :
-            location.href = "#header";
-            break;
-          case "wheel_anchor wheel_anchor3" :
-            location.href = "#section1";
-            break;
-          case "wheel_anchor wheel_anchor4" :
-            location.href = "#section2";
-            break;
-          case "wheel_anchor wheel_anchor5" :
-            location.href = "#section3";
-            break;
-        }
-      }
+    //   if(e.wheelDeltaY < 0){
+    //     switch(e.target.closest('.wheel_anchor').className){
+    //       case "wheel_anchor wheel_anchor1" :
+    //         location.href = "#section1";
+    //         break;
+    //       case "wheel_anchor wheel_anchor2" :
+    //         location.href = "#section2";
+    //         break;
+    //       case "wheel_anchor wheel_anchor3" :
+    //         location.href = "#section3";
+    //         break;
+    //       case "wheel_anchor wheel_anchor4" :
+    //         location.href = "#footer";
+    //         break;
+    //       case "wheel_anchor wheel_anchor5" :
+    //         break;
+    //     }
+    //   }else{
+    //     switch(e.target.closest('.wheel_anchor').className){
+    //       case "wheel_anchor wheel_anchor1" :
+    //         break;
+    //       case "wheel_anchor wheel_anchor2" :
+    //         location.href = "#header";
+    //         break;
+    //       case "wheel_anchor wheel_anchor3" :
+    //         location.href = "#section1";
+    //         break;
+    //       case "wheel_anchor wheel_anchor4" :
+    //         location.href = "#section2";
+    //         break;
+    //       case "wheel_anchor wheel_anchor5" :
+    //         location.href = "#section3";
+    //         break;
+    //     }
+    //   }
 
-    }
+    // }
 
     //헤더 커서 js
     const cursor = document.querySelector('.cursor');
