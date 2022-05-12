@@ -17,6 +17,7 @@
       <a href="#section1">about me</a>
       <a href="#section2">skills</a>
       <a href="#section3">projects</a>
+      <a href="#section4">education</a>
     </span>
   </div>
 
@@ -181,6 +182,19 @@
         </div>
       </div>
     </section>
+
+    <section id="section4">
+      <div>
+        <div class="subject">education</div>
+        <div class="content content4">
+          과정명 : 멀티 디바이스 융합 자바(Java) 디지털 컨버전스 과정<br>
+          교육기관 : 울산KH정보교육원<br>
+          교육기간 : November 2021 - April 2022<br>
+          비고 : 교육 우수자 표창 수여
+        </div>
+      </div>    
+    </section>
+
     <a class="up" href="#header"><svg width="50px" height="50px" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M413.1,327.3l-1.8-2.1l-136-156.5c-4.6-5.3-11.5-8.6-19.2-8.6c-7.7,0-14.6,3.4-19.2,8.6L101,324.9l-2.3,2.6  C97,330,96,333,96,336.2c0,8.7,7.4,15.8,16.6,15.8v0h286.8v0c9.2,0,16.6-7.1,16.6-15.8C416,332.9,414.9,329.8,413.1,327.3z"/></svg></a>
   </main>
 
@@ -199,64 +213,6 @@
   </footer>
 
   <script>
-    //마우스 휠 이벤트
-    // document.addEventListener('wheel', move(event));
-    // document.addEventListener('wheel', e=>{
-      // e.preventDefault();
-      // location.href = "#section1";
-
-      // console.log(e.target);
-      // console.log(e.target.closest('.wheel_anchor').className);
-      // switch(e.target.closest('.wheel_anchor').className){
-      //   case "wheel_anchor wheel_anchor1" :
-      //     console.log("case : 1 => 2");
-      // }
-    // })
-
-    // function wheelFunction(e){
-    //   e.preventDefault();
-
-    //   // console.log(e.wheelDeltaY);//휠 이동
-    //   // console.log(e.target.closest('.wheel_anchor'));//가장 가까운 조상 태그
-
-    //   if(e.wheelDeltaY < 0){
-    //     switch(e.target.closest('.wheel_anchor').className){
-    //       case "wheel_anchor wheel_anchor1" :
-    //         location.href = "#section1";
-    //         break;
-    //       case "wheel_anchor wheel_anchor2" :
-    //         location.href = "#section2";
-    //         break;
-    //       case "wheel_anchor wheel_anchor3" :
-    //         location.href = "#section3";
-    //         break;
-    //       case "wheel_anchor wheel_anchor4" :
-    //         location.href = "#footer";
-    //         break;
-    //       case "wheel_anchor wheel_anchor5" :
-    //         break;
-    //     }
-    //   }else{
-    //     switch(e.target.closest('.wheel_anchor').className){
-    //       case "wheel_anchor wheel_anchor1" :
-    //         break;
-    //       case "wheel_anchor wheel_anchor2" :
-    //         location.href = "#header";
-    //         break;
-    //       case "wheel_anchor wheel_anchor3" :
-    //         location.href = "#section1";
-    //         break;
-    //       case "wheel_anchor wheel_anchor4" :
-    //         location.href = "#section2";
-    //         break;
-    //       case "wheel_anchor wheel_anchor5" :
-    //         location.href = "#section3";
-    //         break;
-    //     }
-    //   }
-
-    // }
-
     //헤더 커서 js
     const cursor = document.querySelector('.cursor');
     document.addEventListener('mousemove', e=>{
@@ -267,18 +223,6 @@
       cursor.style.left = e.clientX + 'px';
       cursor.style.top = e.clientY + 'px';
     })
-
-    //img호버시 gif재생
-    // document.addEventListener('mouseover', e=>{
-    //   if(e.target.className != "refly") return;
-    //   console.log("img over")
-    //   e.target.setAttribute('src', 'assets/refly_gif.gif');
-    // })
-    // document.addEventListener('mouseout', e=>{
-    //   if(e.target.className != "refly") return;
-    //   console.log("img out")
-    //   e.target.setAttribute('src', 'assets/refly_png.png');
-    // })
 
     //프로젝트
     document.addEventListener('DOMContentLoaded', e=>{
@@ -296,8 +240,8 @@
           obj1.style.display = "none";
           obj2.style.display = "block";
       }
-
     }
+
   </script>
 </body>
 </html>
