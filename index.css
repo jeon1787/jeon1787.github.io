@@ -45,7 +45,7 @@ footer{
   display: flex;
   justify-content: space-between;
 
-  z-index: 2;
+  z-index: 3;
   box-shadow: 0 10px 30px rgb(0 0 0 / 20%);
 }
 .upper{
@@ -262,6 +262,17 @@ footer>div>div>a{
   color: black;
 }
 
+@media (max-width:834px) {
+  .upper{
+    padding: 0px;
+    justify-content: center;
+  }
+  .upper>span:first-child{
+    display: none;
+  }  
+}
+
+/* 테블릿css */
 @media (max-width:767px) {
   .upper{
     padding: 0px;
@@ -288,7 +299,11 @@ footer>div>div>a{
     width: 80vw;
   }
 }
-@media (max-width:479px) {
+
+/* 모바일css */
+/* 479px -> 581px */
+/* @media (max-width:479px) {} */
+@media (max-width:581px) {
   .upper{
     padding: 0px;
     height: 50px;

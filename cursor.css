@@ -12,9 +12,6 @@ header{
   align-items: center;
   min-height: 100vh;
 }
-/* ul{
-  animation: fadein 3s;
-} */
 ul a{
   animation: fadein 3s;
 }
@@ -59,6 +56,14 @@ header:hover .cursor{
 ul li:hover ~ .cursor{
   transform: scale(6);
 }
+
+/* 모바일 또는 테블릿 등 터치 기기의 경우 */
+@media screen and (hover: none) and (pointer: coarse) {
+  .cursor{
+    display: none;
+  }  
+}
+
 /* 우주인 */
 #astronaut{
   z-index: 1;
@@ -67,7 +72,7 @@ ul li:hover ~ .cursor{
   left: auto;
   animation: float 4s infinite ease-in-out;
 }
-.a2{
+.zIndex2{
   z-index: 2;
 }
 @keyframes float {
